@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/splitting.min.js"></script>
+  
+    
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span></span>
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="open-icon" id="openBtn">
+                    <a href="#"><img src="images/bars.svg" alt=""></a>
+                </div>
+                <nav class="gnb">
+                    <div class="close-icon" id="closeBtn">
+                    <a href="#"><img src="images/close.svg" alt=""></a>
+                    </div>
+                    <ul class="main-menu">
+                        <li class="main-item">
+                            <a href="#"  class="mainMenu">ABOUT</a>
+                            <ul class="sub-menu" >
+                                <li class="sub-item">
+                                    <a href="#profile">ABOUT</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a href="#profile">GUIDE</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-item">
+                            <a href="#" class="mainMenu">CAT LIFE</a>
+                            <ul class="sub-menu" >
+                                <li class="sub-item">
+                                    <a href="#gallery">CONTENT</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a href="#favorites">FAVORITES</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-item">
+                            <a href="#" class="mainMenu">COMMUNITY</a>
+                        </li>
+                        <li class="main-item"><a href="#" class="mainMenu">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="visual">
+            <div class="visual-inner">
+                <p>cats<span information><img src="images/visual-img1.png" alt=""></span>AND STORIES</p>
+                <p>DAILY CAT<span><img src="images/visual-img2.png" alt=""></span>TIPS</p>
+                <p>life<span><img src="images/visual-img3.png" alt="" id="img"></span>here</p>
+            </div>
+        </section>
+        <section class="profile" id="profile">
+            <div class="profile-inner">
+                <div class="textBox" data-splitting>
+                    <p class="text">Welcome to a space built around cat life.</p>
+                    <p class="text">Explore essential information and guides about cats on this page.</p>
+                    <p class="subtext">고양이를 위한 공간에 오신 것을 환영합니다. 이 페이지에서 고양이에 대한 기본 정보와 가이드를 살펴보세요.</p>
+                    <a href="#" class="btn">VIEW MORE</a>
+                </div>
+            </div>
+        </section>
+        <section class="content" id="content">
+            <div class="inner">
+                    <ul class="list">
+                        <li>
+                            <img src="images/content-img1.png" alt="">
+                            <p><span>MOMENTS</span></p>
+                        </li>
+                        <li>
+                            <img src="images/content-img2.png" alt="">
+                            <p><span>Scenes</span></p>
+                        </li>
+                        <li>
+                            <img src="images/content-img3.png" alt="">
+                            <p><span>Stories</span></p>
+                        </li>
+                        <li>
+                            <img src="images/content-img4.png" alt="">
+                            <p><span>Days</span></p>
+                        </li>
+                    </ul>
+                    <div class="textBox" data-splitting="">
+                        <div class="textBox_inner">
+                            <p class="tit">CONTENT</p>
+                            <p class="text">Cats are full of curiosity,
+                            and their<br> moments are shared with care.<br>This is an archive of everyday cat life.
+                            </p>
+                            <p class="subtext">고양이의 다양한 순간과 호기심 가득한 일상을
+                            사람들과 함께 나누는 공간입니다.<br>
+                            이곳은 일상의 고양이를 기록한 아카이브입니다.</p>
+                            <a href="#" class="btn">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="favorites" id="favorites">
+            <div class="inner">
+                        <div class="textBox"  data-splitting>
+                            <p class="tit">FAVORITES</p>
+                            <p class="text">Cat Lovers’ Favorite Essentials
+                            <br>A curated list of items that brighten their everyday life</p>
+                            <p class="subtext">집사가 인정한 인생템. 일상을 더 즐겁게 만들어주는 추천 리스트</p>
+                            <a href="#" class="btn">VIEW MORE</a>
+                        </div>
+                        <div class="imgBox">
+                            <div class="imgBox-inner">
+                            <div class="img">
+                                <a href="#">
+                                    <img src="images/keyword1.png" alt="">
+                                    <p>ACTIVITY</p>
+                                </a>
+                            </div>
+                            <div class="img">
+                                <a href="#">
+                                    <img src="images/keyword2.png" alt="">
+                                    <p>NUTRITION</p>
+                                </a>
+                            </div>
+                            <div class="img">
+                                <a href="#">
+                                    <img src="images/keyword3.png" alt="">
+                                    <p>DILLIGHT</p>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+        <section class="community-sub" id="community-sub">
+            <div class="inner">
+                <div class="imgBox">
+                    <img src="images/community-sub-img.png" alt="">
+                </div>
+                <div class="textBox" data-splitting>
+                    <p class="tit">COMMUNITY</p>
+                    <p class="text">Have a question about your cat?<br>Get answers from cat lovers.</p>
+                    <p class="subtext">고양이에 대해 궁금한 점이 있나요?<br> 다른 집사들과 경험을 나누며 답을 찾아보세요.</p>
+                    <a href="#" class="btn">VIEW MORE</a>
+                </div>
+            </div>
+        </section>
+        <section class="community" id="community">
+            <div class="inner">
+                <h2>COMMUNITY</h2>
+            <ul>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/community1.jpg" alt="">
+                    </div>
+                    <div class="textBox">
+                        <p class="title">현관에서 기다리던 고양이…</p>
+                        <p class="txt">오늘 퇴근하고 집에 오니까 고양이가 현관에서 기다리고 있더라요…
+                        그 모습 보자마자 하루 피로가 싹 풀렸어요.
+                        혹시 여러분네 고양이도 이런가요?</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/community2.jpg" alt="">
+                    </div>
+                    <div class="textBox">
+                        <p class="title">밤마다 폭주하는 고양이, 이유가 뭘까요?</p>
+                        <p class="txt">요즘 우리 집 고양이가 밤마다 갑자기 뛰어다니는데
+                        혹시 비슷한 경험 있는 분 계신가요?
+                        놀아주는 시간이 부족한 건지, 에너지가 넘치는 건지 고민이네요…!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/community3.jpg" alt="">
+                    </div>
+                    <div class="textBox">
+                        <p class="title">오늘 날씨 너무 춥네요</p>
+                        <p class="txt">오늘 날씨 진짜 춥네요 ☁️
+                        하리랑 콩이는 잘 지내고 있죠?
+                        모든 집사님들 감기 조심하세요!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <img src="images/community4.jpg" alt="">
+                    </div>
+                    <div class="textBox">
+                        <p class="title">노트북은 왜 고양이의 침대인가…</p>
+                        <p class="txt">저희 집 고양이가 제 노트북 위에만 올라가요…
+                        왜 하필 일할 때만 관심이 폭발하는 걸까요?
+                        혹시 다른 집 고양이들도 생산성 파괴 전문가인가요?</p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="inner">
+                <div class="email">
+                    <p>E-MAIL catverse@naver.com</p>
+                    <p>PHONE 010.0000.0000</p>
+                </div>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+                    <li><a href="https://www.facebook.com" target="_blank">FACEBOOK</a></li>
+                    <li><a href="https://www.youtube.com" target="_blank">YOUTUBE</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
