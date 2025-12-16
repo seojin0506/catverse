@@ -18,10 +18,10 @@ a:focus {outline: none}
 button:focus {outline: none}
 
 
-body {font-family: 'Pretendard', sans-serif; }
+body {font-family: 'Pretendard', sans-serif; overflow-x: hidden; }
 .tit{font-size: clamp(0.6rem , 0.8vw, 0.9rem); font-weight: 600; font-family: 'Noto Sans KR', sans-serif; color: rgba(0,0,0,0.9); letter-spacing: 0;}
 .text{ font-family: "Niramit", sans-serif; font-style: italic; letter-spacing: -0.03em; line-height: 1.24; font-weight: 400;}
-.subtext{font-size: clamp(0.7rem , 0.94vw, 1.4rem); font-family: 'Noto Sans KR',sans-serif;     color: rgba(255,255,255,0.6); font-weight: 400; }
+.subtext{font-size: clamp(0.6rem , 0.94vw, 1.4rem); font-family: 'Noto Sans KR',sans-serif;     color: rgba(255,255,255,0.6); font-weight: 400; }
 .btn {
     border-radius: clamp(1px, 4.4vw, 26px);
     width: clamp(50px, 7.8vw, 135px);
@@ -99,15 +99,12 @@ margin: 0 6px; }
 
 
 .content{width: 100%; height: auto; padding: 150px 0 190px;  background: white; position: relative;}
-.content .inner{width: 80%; margin: 0 auto;  }
+.content .inner{width: 74.6%; margin: 0 auto;  }
 .content .inner .list{width: 50%; }
 .content .inner .list li{margin-bottom: 4.7%; position: relative;}
 .content .inner .list li p{  position: absolute; inset: 0; background: rgba(0,0,0,0.5); width: 100%; height: 100%; border-radius: 15px; display: none; }
 .content .inner .list li p span{top: 50%; left: 50%; transform: translate(-50%,-50%); position: absolute;  color: #fff; font-size: 60px; font-family: 'Baskervville',serif; letter-spacing: 0; font-style: italic; font-weight: 600; text-transform: uppercase;}
 .content .inner .list li p.on{display: block;}
-
-
-
 .content .inner .list li img{width: 100%; height: auto; display: block; object-fit: cover; border-radius: 15px; }
 .content .inner .textBox{ position: absolute; top: 16%; right: 0; width: 44%; height: 79%; letter-spacing: -0.02em; color: #111;}
 .content .inner .textBox_inner {position: sticky; top: 50%; transform: translateY(-50%);}
@@ -228,13 +225,28 @@ margin: 0 6px; }
 
 
 @media screen and (max-width: 1500px) {
-.content{padding: 120px 0 80px; }
+.content{padding: 10% 0 80px; }
 }
 @media screen and (max-width: 1400px) {
-.content .inner .list{display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; margin-top: 28%; }
+.content .inner .list{display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; margin-top: 12%; }
 .content .inner .list li{width: 48%; margin-top: -3%; }
-.content .inner .textBox {top: 8%; left: 10%; height: auto;  }
-.content .inner .textBox_inner {position: static; top: 0; transform: translateY(0);}
+.content .inner .textBox{
+    position: static !important;    
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;  
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+.content .inner .textBox_inner {position: static; top: 0; left: 0; transform: translateY(0);}
+.content .inner{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+.content .inner .textBox .btn{margin-top: -2%;}
 .content .inner .list li p.on{display:none;}
 .content .inner .list li:hover p {display: block;}
 .header .header-inner .gnb{width: 400px;}
@@ -252,9 +264,12 @@ margin: 0 6px; }
   .header .header-inner .open-icon{width: 38px; }
   .visual{height: 80vh;}
   .content .inner .list li:hover p {display: none;}
-  .content .inner .textBox .text{width: 400px;}
-  .content .inner .textBox .subtext{width: 400px;}
-  .content .inner .list{ margin-top: 32%; }
+   .content .inner .textBox .text {
+        width: 100%;
+    }
+  .content .inner .textBox .subtext {
+        width:100%;
+    }
    .footer .inner {padding: 25px 0;}
  .community .inner ul {flex-wrap: wrap; width: 100%; align-items: center; text-align: left;}
  .community .inner ul  li{width: 48%; margin-bottom: 30px;}
@@ -263,6 +278,18 @@ margin: 0 6px; }
  .footer .inner ul {width: 45%;}
  .favorites .inner .imgBox .img{width: 32%;}
  .community .inner h2{font-size: 26px;}
+ .favorites .btn.motion, .profile .btn.motion{animation: none;}
+ .favorites .btn, .profile .btn{background: #fff;}
+ .community-sub .btn, .content .textBox .btn{background: #000;}
+ .community-sub .inner .textBox .btn{background: #000;}
+ .content .inner .textBox .btn{background: #000;}
+ .community-sub .btn.motion , .content .textBox .btn.motion{animation: none;}
+ .textBox.motion .word{animation: none;}
+ .community-sub .inner .imgBox.motion {animation: none;}
+  .favorites .inner .imgBox .img:nth-child(1).motion{ animation: none;}
+  .favorites .inner .imgBox .img:nth-child(2).motion{ animation: none;}
+  .favorites .inner .imgBox .img:nth-child(3).motion{ animation: none;}
+  .favorites .inner .img a:hover img{transform: none; }
 }
 
 @media screen and (max-width: 590px){
@@ -272,20 +299,25 @@ margin: 0 6px; }
  .favorites .inner .imgBox .imgBox-inner{display: block; width: 100%;}
  .favorites .inner .imgBox .img{width: 100%; margin-bottom: 20px;}
  .favorites .inner .imgBox .img p{font-size: clamp(0.6rem, 4vw, 4.2rem);}
-  .favorites .inner .imgBox .img:nth-child(1).motion{ animation: none;}
-  .favorites .inner .imgBox .img:nth-child(2).motion{ animation: none;}
-  .favorites .inner .imgBox .img:nth-child(3).motion{ animation: none;}
-  .favorites .inner .img a:hover img{transform: none; }
 .favorites .inner .img a:hover p{letter-spacing: 0px;}
 .community .inner h2{font-size: 20px;}
 .community-sub{padding-top:10% ;}
-.community-sub .inner .imgBox.motion {animation: none;}
 .community-sub .inner{flex-direction: column-reverse;}
 .community-sub .inner .imgBox{width: 100%; height: 30%; margin-top: 12px;}
 .community-sub .inner .textBox .text {font-size: clamp(1rem, 1.6vw, 2.2rem)}
+.community-sub .inner .textBox .sub-text{width: 100%;}
 .community-sub .inner .textBox .btn{margin-top: 4.6%;}
  .footer .inner {padding: 18px 0;}
  .footer .inner ul {display: block; text-align: right;}
  .footer .inner ul  li{margin-bottom: 5%;}
- .footer .inner .email{width: 600px;}
+ .footer .inner .email{width: 600px;
+}
+}
+@media screen and (max-width: 590px){
+  .header .header-inner .gnb{width: 200px;}
+   
+}
+@media screen and (max-width: 389px){
+  .header .header-inner .gnb{width: 200px;}
+
 }
