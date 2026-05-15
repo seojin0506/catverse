@@ -13,7 +13,12 @@ Catverse는 Cat과 Universe의 합성어로, 시각 중심의 구성과 커뮤�
 | 참여자 | 김서진 |
 | 유형 | 개인 웹사이트 제작 프로젝트 |
 | 제작기간 | 2025.12.22 ~ 2026.01.07 |
- 
+
+<br>
+
+ **🌐 Live Demo
+https://seo-jin-kim.github.io/catverse/**
+
 ---
  
 ## 🛠 기술 스택
